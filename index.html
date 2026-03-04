@@ -7,41 +7,73 @@
 body{font-family:Arial;margin:0;padding:0;background:#f4f4f4;}
 header{background:#0a1f44;color:white;padding:20px;text-align:center;}
 section{padding:20px;}
-.card{background:white;padding:15px;margin:15px 0;border-radius:10px;box-shadow:0 4px 8px rgba(0,0,0,0.1);}
+.card{
+  background:white;
+  padding:15px;
+  margin:15px 0;
+  border-radius:10px;
+  box-shadow:0 4px 8px rgba(0,0,0,0.1);
+  transition:0.3s;
+}
+.card:hover{
+  transform:scale(1.02);
+}
 h2{color:#0a1f44;}
-button{background:#28a745;color:white;padding:10px 15px;border:none;border-radius:5px;}
-footer{background:#0a1f44;color:white;text-align:center;padding:10px;margin-top:20px;}
+a{text-decoration:none;color:#0a1f44;}
+footer{
+  background:#0a1f44;
+  color:white;
+  text-align:center;
+  padding:10px;
+  margin-top:20px;
+}
 </style>
 </head>
 <body>
 
 <header>
 <h1>MSME MITRA</h1>
-<p>Business Advisor | Loan | GST | Insurance | Solar</p>
+<p>Business Advisor | Loan | GST | Insurance | Digital Services</p>
 </header>
 
 <section>
 <h2>Our Service Categories</h2>
 
 <div class="card">
-<a href="loan.html"><h3>Loan Services</h3></a>
-<p>Personal, Business, Home Loan & Credit Card</p>
+<a href="government-loan.html">
+<h3>1️⃣ Government Loan & Other Schemes</h3>
+<p>PM Yojana, MSME Schemes, Mudra Loan, Subsidy Schemes</p>
+</a>
 </div>
 
 <div class="card">
-<a href="tax.html"><h3>Tax & Compliance</h3></a>
-<p>GST, ITR, MSME, Company Registration</p>
+<a href="private-loan.html">
+<h3>2️⃣ Private Loan & Credit Card</h3>
+<p>Personal Loan, Business Loan, Home Loan, Credit Card</p>
+</a>
 </div>
 
 <div class="card">
-<a href="insurance.html"><h3>Insurance Services</h3></a>
-<p>Health, Motor & Life Insurance</p>
+<a href="taxation.html">
+<h3>3️⃣ Taxation, Registration & Certificate Services</h3>
+<p>GST, ITR Filing, MSME Registration, Company Registration, Trademark</p>
+</a>
 </div>
 
 <div class="card">
-<a href="government.html"><h3>Government Schemes</h3></a>
-<p>PM Surya Ghar, MSME Loan Schemes</p>
+<a href="insurance.html">
+<h3>4️⃣ All Insurance Services</h3>
+<p>Health Insurance, Motor Insurance, Life Insurance</p>
+</a>
 </div>
+
+<div class="card">
+<a href="digital.html">
+<h3>5️⃣ Other Digital Services</h3>
+<p>AEPS, Bill Payment, PAN Card, Online Services</p>
+</a>
+</div>
+
 </section>
 
 <section>
@@ -50,27 +82,6 @@ footer{background:#0a1f44;color:white;text-align:center;padding:10px;margin-top:
 📞 6398180950 <br>
 📧 msmemitrayatendra@gmail.com <br>
 📍 Hathras, Uttar Pradesh
-</div>
-</section>
-
-<section>
-<h2>Contact Form</h2>
-<div class="card">
-<form name="contact" method="POST" data-netlify="true">
-
-<input type="hidden" name="form-name" value="contact">
-
-<input type="text" name="name" placeholder="Your Name" required><br><br>
-
-<input type="text" name="mobile" placeholder="Mobile Number" required><br><br>
-
-<input type="text" name="service" placeholder="Service Required"><br><br>
-
-<textarea name="message" placeholder="Your Message"></textarea><br><br>
-
-<button type="submit">Submit</button>
-
-</form>
 </div>
 </section>
 
@@ -89,6 +100,7 @@ footer{background:#0a1f44;color:white;text-align:center;padding:10px;margin-top:
           border-radius:50px;
           text-decoration:none;
           font-size:16px;
+          font-weight:bold;
           box-shadow:0 4px 8px rgba(0,0,0,0.3);">
    Chat on WhatsApp
 </a>
