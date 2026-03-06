@@ -9,158 +9,151 @@
 body{
 font-family:Arial;
 margin:0;
-padding:0;
-background:#f4f4f4;
+background:#f5f7fb;
 }
+
+/* HEADER */
 
 header{
 background:#0a1f44;
 color:white;
-padding:25px;
+padding:20px;
 text-align:center;
 }
 
+nav{
+background:#071632;
+padding:10px;
+text-align:center;
+}
+
+nav a{
+color:white;
+margin:10px;
+text-decoration:none;
+font-size:14px;
+}
+
+/* HERO */
+
+.hero{
+background:#1c3faa;
+color:white;
+padding:60px 20px;
+text-align:center;
+}
+
+.hero h1{
+font-size:32px;
+margin-bottom:10px;
+}
+
+/* SECTION */
+
 section{
-padding:20px;
+padding:30px 20px;
+}
+
+/* SERVICES */
+
+.services{
+display:grid;
+grid-template-columns:1fr;
+gap:20px;
 }
 
 .card{
 background:white;
-padding:18px;
-margin:15px 0;
+padding:20px;
 border-radius:10px;
-box-shadow:0 4px 8px rgba(0,0,0,0.1);
+box-shadow:0 5px 10px rgba(0,0,0,0.1);
 }
 
-h2{
+.card h3{
 color:#0a1f44;
 }
 
-a{
-text-decoration:none;
-color:black;
+/* ABOUT */
+
+.about{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 5px 10px rgba(0,0,0,0.1);
 }
+
+/* CONTACT */
+
+.contact{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 5px 10px rgba(0,0,0,0.1);
+}
+
+/* FOOTER */
 
 footer{
 background:#0a1f44;
 color:white;
 text-align:center;
 padding:15px;
-margin-top:30px;
+margin-top:40px;
 }
 
 </style>
+
 </head>
 
 <body>
 
 <header>
+
 <h1>MSME MITRA</h1>
+
 <p>Business Advisor | Loan | GST | Insurance | Digital Services</p>
+
 </header>
+
+<nav>
+
+<a href="#">Home</a>
+<a href="#">Services</a>
+<a href="#">About</a>
+<a href="#">Contact</a>
+
+</nav>
+
+
+<!-- HERO -->
+
+<div class="hero">
+
+<h1>All Business Services In One Place</h1>
+
+<p>Loan | GST | Insurance | Government Schemes | Digital Services</p>
+
+</div>
+
+
+<!-- SERVICES -->
 
 <section>
 
 <h2>Our Service Categories</h2>
 
-<div class="card">
-<a href="#">
-<h3>1️⃣ Government Loan & Other Schemes</h3>
-<p>PMEGP Loan, Mudra Loan, CGTMSE, Standup India, PM Surya Ghar Yojana, MSME delayed payment service</p>
-</a>
-</div>
-
-<div class="card">
-<a href="#">
-<h3>2️⃣ Private Loan & Credit Card</h3>
-<p>Personal Loan, Business Loan, Home Loan, LAP, Credit Card</p>
-</a>
-</div>
-
-<div class="card">
-<a href="#">
-<h3>3️⃣ Taxation Services, Registration & Certificates</h3>
-<p>GST Registration, GST Return, ITR Filing, MSME Registration, Trademark</p>
-</a>
-</div>
-
-<div class="card">
-<a href="#">
-<h3>4️⃣ All Insurance Services</h3>
-<p>Health Insurance, Life Insurance, Motor Insurance, Business Insurance</p>
-</a>
-</div>
-
-<div class="card">
-<a href="#">
-<h3>5️⃣ Other Digital & Business Services</h3>
-<p> Digital Earning, Save & Rich Plan, Apni Canteen Franchise</p>
-</a>
-</div>
-
-</section>
-
-<section>
-
-<h2>About MSME MITRA</h2>
+<div class="services">
 
 <div class="card">
 
-<p>
-MSME MITRA is a Business Advisory Platform that helps individuals and businesses 
-to access financial services, government schemes, taxation services, insurance 
-solutions and digital earning opportunities.
-</p>
+<h3>Government Loan & Schemes</h3>
 
-<p>
-Our mission is to make business services simple and accessible for everyone.
-</p>
+<p>PMEGP Loan, Mudra Loan, CGTMSE, Standup India, PM Surya Ghar Yojana</p>
 
 </div>
-
-</section>
-
-<section>
-
-<h2>Contact Details</h2>
 
 <div class="card">
 
-📞 Mobile : 6398180950 <br><br>
+<h3>Private Loan & Credit Card</h3>
 
-📧 Email : msmemitrayatendra@gmail.com <br><br>
-
-📍 Location : Hathras, Uttar Pradesh
-
-</div>
-
-</section>
-
-<footer>
-
-© 2026 MSME MITRA - All Rights Reserved
-
-</footer>
-
-<!-- WhatsApp Floating Button -->
-
-<a href="https://wa.me/916398180950"
-style="
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:15px 18px;
-border-radius:50px;
-text-decoration:none;
-font-size:16px;
-box-shadow:0 4px 8px rgba(0,0,0,0.3);
-">
-
-Chat on WhatsApp
-
-</a>
-
-</body>
-</html>
+<p>Personal Loan, Business Loan, Home Loan, LAP, Credit Card</
