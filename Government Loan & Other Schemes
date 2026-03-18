@@ -1,1 +1,28 @@
+<section class="loan-section">
 
+<h2>Government Loan & Other Schemes</h2>
+
+<button onclick="toggleCategory('msme')">Business / MSME Loans</button>
+<div id="msme" class="services">
+<button onclick="showService('mudra')">PM Mudra Loan</button>
+<button onclick="showService('pmegp')">PMEGP Loan</button>
+</div>
+
+<button onclick="toggleCategory('agriculture')">Agriculture Loans</button>
+<div id="agriculture" class="services">
+<button onclick="showService('kcc')">Kisan Credit Card</button>
+</div>
+
+<button onclick="toggleCategory('street')">Small Business / Street Vendor</button>
+<div id="street" class="services">
+<button onclick="showService('svanidhi')">PM SVANidhi Loan</button>
+</div>
+
+<button onclick="toggleCategory('housing')">Housing Loan Schemes</button>
+<div id="housing" class="services">
+<button onclick="showService('pmay')">PM Awas Yojana</button>
+</div>
+
+</section>
+
+<div id="serviceDetail"></div>
