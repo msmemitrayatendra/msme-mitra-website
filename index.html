@@ -3,261 +3,176 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>MSME Mitra</title>
 
 <style>
-
-body{
-font-family: Arial;
-margin:0;
-padding:0;
-background:#f5f5f5;
-}
-
-/* HEADER */
-header{
-background:#0b6efd;
-color:white;
-padding:15px;
-text-align:center;
-font-size:22px;
-}
-
-/* SECTION */
-.loan-section{
-padding:20px;
-}
-
-/* BUTTONS */
-.loan-section button{
-display:block;
-width:100%;
-margin:10px 0;
-padding:12px;
-background:#0b6efd;
-color:white;
-border:none;
-border-radius:6px;
-font-size:16px;
+body{font-family:Arial;margin:0;background:#f5f5f5;}
+header{background:#0b6efd;color:#fff;padding:15px;text-align:center;font-size:22px;}
+.section{padding:20px;}
+button{
+display:block;width:100%;margin:6px 0;padding:12px;
+background:#0b6efd;color:#fff;border:none;border-radius:6px;
 cursor:pointer;
 }
-
-/* SUB SERVICES */
-.services{
-display:none;
-margin-left:15px;
-}
-
-/* DETAIL BOX */
-#serviceDetail{
-margin:20px;
-padding:20px;
-background:white;
-border-radius:8px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
-}
-
-.apply-btn{
-background:green;
-margin-top:10px;
-}
-
-input{
-width:100%;
-padding:10px;
-margin-top:5px;
-}
-
+.sub{display:none;margin-left:15px;}
+#detail{margin:20px;padding:20px;background:#fff;border-radius:8px;}
+input{width:100%;padding:10px;margin:5px 0;}
+.apply{background:green;}
 </style>
 
 </head>
 
 <body>
 
-<header>
-MSME MITRA – Government Loan & Schemes
-</header>
+<header>MSME MITRA – ALL SERVICES PORTAL</header>
 
-<section class="loan-section">
+<div class="section">
 
-<h2>Government Loan & Other Schemes</h2>
+<h2>All Services</h2>
 
-<!-- MSME -->
-<button onclick="toggleCategory('msme')">Business / MSME Loans</button>
-<div id="msme" class="services">
-<button onclick="showService('mudra')">PM Mudra Loan</button>
-<button onclick="showService('pmegp')">PMEGP Loan</button>
-<button onclick="showService('cgtmse')">CGTMSE Loan</button>
+<!-- CATEGORY 1 -->
+<button onclick="toggle('gov')">Government Loan & Other Schemes</button>
+<div id="gov" class="sub">
+<button onclick="show('mudra')">PM Mudra Loan</button>
+<button onclick="show('pmegp')">PMEGP Loan</button>
+<button onclick="show('cgtmse')">CGTMSE Loan</button>
+<button onclick="show('sidbi')">SIDBI Loan</button>
+<button onclick="show('kcc')">KCC Loan</button>
+<button onclick="show('dairy')">Dairy Loan</button>
+<button onclick="show('svanidhi')">SVANidhi Loan</button>
+<button onclick="show('pmay')">PMAY</button>
+<button onclick="show('edu')">Education Loan</button>
+<button onclick="show('standup')">Stand Up India</button>
 </div>
 
-<!-- Agriculture -->
-<button onclick="toggleCategory('agriculture')">Agriculture Loans</button>
-<div id="agriculture" class="services">
-<button onclick="showService('kcc')">Kisan Credit Card</button>
+<!-- CATEGORY 2 -->
+<button onclick="toggle('pvt')">Private Loan & Credit Card</button>
+<div id="pvt" class="sub">
+<button onclick="show('personal')">Personal Loan</button>
+<button onclick="show('business')">Business Loan</button>
+<button onclick="show('home')">Home Loan</button>
+<button onclick="show('lap')">Loan Against Property</button>
+<button onclick="show('car')">Car Loan</button>
+<button onclick="show('bike')">Bike Loan</button>
+<button onclick="show('cc')">Credit Card</button>
 </div>
 
-<!-- Street Vendor -->
-<button onclick="toggleCategory('street')">Small Business / Street Vendor</button>
-<div id="street" class="services">
-<button onclick="showService('svanidhi')">PM SVANidhi Loan</button>
+<!-- CATEGORY 3 -->
+<button onclick="toggle('tax')">Taxation & Registration</button>
+<div id="tax" class="sub">
+<button onclick="show('gstreg')">GST Registration</button>
+<button onclick="show('gstr')">GST Return</button>
+<button onclick="show('itr')">ITR Filing</button>
+<button onclick="show('msme')">MSME Registration</button>
+<button onclick="show('fssai')">FSSAI License</button>
+<button onclick="show('tm')">Trademark</button>
+<button onclick="show('company')">Company Reg.</button>
 </div>
 
-<!-- Housing -->
-<button onclick="toggleCategory('housing')">Housing Loan Schemes</button>
-<div id="housing" class="services">
-<button onclick="showService('pmay')">PM Awas Yojana</button>
+<!-- CATEGORY 4 -->
+<button onclick="toggle('ins')">Insurance Services</button>
+<div id="ins" class="sub">
+<button onclick="show('life')">Life Insurance</button>
+<button onclick="show('health')">Health Insurance</button>
+<button onclick="show('motor')">Motor Insurance</button>
+<button onclick="show('bikeins')">Bike Insurance</button>
+<button onclick="show('term')">Term Plan</button>
 </div>
 
-<!-- Education -->
-<button onclick="toggleCategory('education')">Education Loan Schemes</button>
-<div id="education" class="services">
-<button onclick="showService('edu')">Education Loan</button>
+<!-- CATEGORY 5 -->
+<button onclick="toggle('other')">Other Services</button>
+<div id="other" class="sub">
+<button onclick="show('aeps')">AEPS</button>
+<button onclick="show('pan')">PAN Card</button>
+<button onclick="show('aadhar')">Aadhaar Update</button>
+<button onclick="show('bill')">Bill Payment</button>
+<button onclick="show('recharge')">Recharge</button>
+<button onclick="show('money')">Money Transfer</button>
+<button onclick="show('gpay')">Google Pay Setup</button>
+<button onclick="show('franchise')">Franchise</button>
 </div>
 
-<!-- Women -->
-<button onclick="toggleCategory('women')">Women Loan Schemes</button>
-<div id="women" class="services">
-<button onclick="showService('standup')">Stand Up India</button>
 </div>
 
-<!-- Special -->
-<button onclick="toggleCategory('special')">Special Category Loans</button>
-<div id="special" class="services">
-<button onclick="showService('scst')">SC/ST Loan Scheme</button>
-</div>
-
-<!-- Development -->
-<button onclick="toggleCategory('development')">Other Development Loans</button>
-<div id="development" class="services">
-<button onclick="showService('startup')">Startup India Loan</button>
-</div>
-
-</section>
-
-<!-- SERVICE DETAIL -->
-<div id="serviceDetail"></div>
+<div id="detail"></div>
 
 <script>
 
-function toggleCategory(id){
-let section = document.getElementById(id);
-
-if(section.style.display === "block"){
-section.style.display = "none";
-}else{
-section.style.display = "block";
-}
+function toggle(id){
+let x=document.getElementById(id);
+x.style.display=(x.style.display=="block")?"none":"block";
 }
 
-function showService(service){
+function show(service){
 
-let data = {
+let data={
+mudra:{t:"PM Mudra Loan",d:"Business loan upto 10L",doc:"Aadhar,PAN"},
+pmegp:{t:"PMEGP Loan",d:"Startup scheme",doc:"Project"},
+cgtmse:{t:"CGTMSE",d:"Collateral free",doc:"Business proof"},
+sidbi:{t:"SIDBI",d:"MSME finance",doc:"Docs"},
+kcc:{t:"KCC",d:"Farmer loan",doc:"Land proof"},
+dairy:{t:"Dairy Loan",d:"Farming",doc:"Farm docs"},
+svanidhi:{t:"SVANidhi",d:"Vendor loan",doc:"Vendor ID"},
+pmay:{t:"PMAY",d:"Home subsidy",doc:"Income"},
+edu:{t:"Education Loan",d:"Study loan",doc:"Admission"},
+standup:{t:"StandUp",d:"Women/SC loan",doc:"Plan"},
 
-mudra:{
-title:"PM Mudra Loan",
-desc:"Loan from ₹50,000 to ₹10 lakh for small business.",
-docs:"Aadhar Card, PAN Card, Bank Statement"
-},
+personal:{t:"Personal Loan",d:"Instant loan",doc:"Aadhar"},
+business:{t:"Business Loan",d:"Business funding",doc:"Docs"},
+home:{t:"Home Loan",d:"House loan",doc:"Income"},
+lap:{t:"Loan Against Property",d:"Property loan",doc:"Property"},
+car:{t:"Car Loan",d:"Vehicle loan",doc:"DL"},
+bike:{t:"Bike Loan",d:"2 wheeler loan",doc:"DL"},
+cc:{t:"Credit Card",d:"Instant card",doc:"PAN"},
 
-pmegp:{
-title:"PMEGP Loan",
-desc:"Government scheme for new business startup.",
-docs:"Aadhar Card, Project Report"
-},
+gstreg:{t:"GST Registration",d:"GST apply",doc:"Docs"},
+gstr:{t:"GST Return",d:"File GST",doc:"Bills"},
+itr:{t:"ITR Filing",d:"Income tax",doc:"Income"},
+msme:{t:"MSME Registration",d:"Udyam reg",doc:"Aadhar"},
+fssai:{t:"FSSAI",d:"Food license",doc:"Shop"},
+tm:{t:"Trademark",d:"Brand reg",doc:"Logo"},
+company:{t:"Company Reg.",d:"Pvt Ltd reg",doc:"Docs"},
 
-cgtmse:{
-title:"CGTMSE Loan",
-desc:"Collateral free loan for MSME businesses.",
-docs:"Business proof, Aadhar, PAN"
-},
+life:{t:"Life Insurance",d:"Life cover",doc:"ID"},
+health:{t:"Health Insurance",d:"Medical cover",doc:"ID"},
+motor:{t:"Motor Insurance",d:"Car cover",doc:"RC"},
+bikeins:{t:"Bike Insurance",d:"Bike cover",doc:"RC"},
+term:{t:"Term Plan",d:"Long cover",doc:"ID"},
 
-kcc:{
-title:"Kisan Credit Card",
-desc:"Loan for farmers.",
-docs:"Aadhar Card, Land Proof"
-},
-
-svanidhi:{
-title:"PM SVANidhi Loan",
-desc:"Loan for street vendors.",
-docs:"Aadhar Card"
-},
-
-pmay:{
-title:"PM Awas Yojana",
-desc:"Home loan subsidy scheme.",
-docs:"Aadhar Card, Income Proof"
-},
-
-edu:{
-title:"Education Loan",
-desc:"Loan for higher studies.",
-docs:"Admission Proof"
-},
-
-standup:{
-title:"Stand Up India Loan",
-desc:"Loan for women & SC/ST.",
-docs:"Aadhar, Business Plan"
-},
-
-scst:{
-title:"SC/ST Loan Scheme",
-desc:"Special loan for SC/ST category.",
-docs:"Caste Certificate, Aadhar"
-},
-
-startup:{
-title:"Startup India Loan",
-desc:"Loan for startups.",
-docs:"Business Plan"
-}
-
+aeps:{t:"AEPS",d:"Cash withdrawal",doc:"Aadhar"},
+pan:{t:"PAN Card",d:"PAN apply",doc:"ID"},
+aadhar:{t:"Aadhaar Update",d:"Update",doc:"Aadhar"},
+bill:{t:"Bill Payment",d:"Pay bills",doc:"None"},
+recharge:{t:"Recharge",d:"Mobile recharge",doc:"None"},
+money:{t:"Money Transfer",d:"Send money",doc:"Bank"},
+gpay:{t:"Google Pay",d:"Setup",doc:"Mobile"},
+franchise:{t:"Franchise",d:"Start business",doc:"ID"}
 };
 
-let s = data[service];
+let s=data[service];
 
-document.getElementById("serviceDetail").innerHTML =
+document.getElementById("detail").innerHTML=`
+<h3>${s.t}</h3>
+<p>${s.d}</p>
+<p><b>Docs:</b> ${s.doc}</p>
 
-`
-<h3>${s.title}</h3>
-<p>${s.desc}</p>
-
-<h4>Required Documents</h4>
-<p>${s.docs}</p>
-
-<a href="https://wa.me/91XXXXXXXXXX?text=I want to apply for ${s.title}" target="_blank">
-<button class="apply-btn">Apply on WhatsApp</button>
+<a href="https://wa.me/916398180950?text=Apply for ${s.t}">
+<button class="apply">Apply WhatsApp</button>
 </a>
 
-<br><br>
-
-<form onsubmit="submitForm(event, '${s.title}')">
-<input type="text" placeholder="Full Name" required>
-<input type="tel" placeholder="Mobile Number" required>
-<button type="submit">Apply Now</button>
+<form onsubmit="send(event,'${s.t}')">
+<input placeholder="Name" required>
+<input placeholder="Mobile" required>
+<button>Apply</button>
 </form>
 `;
-
 }
 
-function submitForm(e, service){
+function send(e,s){
 e.preventDefault();
-
-let name = e.target[0].value;
-let mobile = e.target[1].value;
-
-let message = `Hello MSME Mitra,%0A
-I want to apply for: ${service}%0A
-Name: ${name}%0A
-Mobile: ${mobile}`;
-
-let whatsappNumber = "91XXXXXXXXXX"; // 👉 अपना नंबर डालो
-
-let url = `https://wa.me/${whatsappNumber}?text=${message}`;
-
-window.open(url, "_blank");
+let n=e.target[0].value;
+let m=e.target[1].value;
+window.open(`https://wa.me/91XXXXXXXXXX?text=Service:${s}%0AName:${n}%0AMobile:${m}`);
 }
 
 </script>
